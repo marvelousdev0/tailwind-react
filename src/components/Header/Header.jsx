@@ -30,7 +30,7 @@ export default function Header() {
   }
 
   return (
-    <nav className="flex items-center justify-between flex-wrap px-6 py-4 bg-white">
+    <nav className="flex items-center justify-between flex-wrap px-6 py-4 bg-white dark:bg-gray-800 text-black dark:text-white">
       <div
         className="rounded-full hover:bg-gray-100 focus:bg-gray-100 h-10 w-10 flex items-center justify-center cursor-pointer"
         onClick={() => dispatch(setSideNavExpand(!sideNavExpand))}

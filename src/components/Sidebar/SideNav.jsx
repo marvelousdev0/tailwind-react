@@ -2,11 +2,12 @@ import _ from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { sideNav } from "../../utils/sideNav";
 import { faChevronDown } from "@fortawesome/pro-light-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getSideNavExpand } from "../../selectors/settings";
 
 export default function SideNav() {
+  const { pathname } = useLocation();
   const sideNavExpand = useSelector((state) => getSideNavExpand(state));
 
   return (
@@ -15,10 +16,16 @@ export default function SideNav() {
         {sideNav &&
           sideNav.length > 0 &&
           _.map(sideNav, (sideNavItem) => (
-            <li className="mb-6" key={sideNavItem.id}>
-              {/* shadow py-2 bg-white dark:bg-gray-200 rounded-lg-ml-4 */}
+            <li
+              className={`mb-4 px-6 py-2 ${
+                pathname === sideNavItem.path &&
+                "shadow bg-gray-200 dark:bg-gray-800 rounded-lg"
+              }`}
+              key={sideNavItem.id}
+            >
+              {/*  */}
               <Link
-                className={`flex align-center ${
+                className={`flex items-center ${
                   sideNavExpand ? "justify-between" : "justify-center"
                 }`}
                 to={sideNavItem.path}

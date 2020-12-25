@@ -12,9 +12,9 @@ export default function UserOptions() {
     >
       <button
         className={`flex items-center ${
-          sideNavExpand ? "justify-between" : "justify-center"
+          sideNavExpand ? "justify-between" : "justify-center rounded-full"
         } px-4 py-2 text-white
-        dark:text-blue-500 bg-blue-500 dark:bg-blue-200 rounded-md shadow-none ring-0 focus:ring-0 mr-3 mb-1`}
+        dark:text-blue-500 bg-blue-500 dark:bg-blue-100 rounded-md shadow-none ring-0 focus:ring-0 mr-3 mb-1`}
       >
         <svg
           className={`h-4 w-4 fill-current ${sideNavExpand ? "mr-2" : "mr-0"}`}
@@ -27,9 +27,9 @@ export default function UserOptions() {
       </button>
       <button
         className={`flex items-center ${
-          sideNavExpand ? "justify-between" : "justify-center"
+          sideNavExpand ? "justify-between" : "justify-center rounded-full"
         } px-4 py-2 text-white
-        dark:text-blue-500 bg-blue-500 dark:bg-blue-200 rounded-md shadow-none ring-0 focus:ring-0 mr-3 mb-1`}
+        dark:text-blue-500 bg-blue-500 dark:bg-blue-100 rounded-md shadow-none ring-0 focus:ring-0 mr-3 mb-1`}
       >
         <svg
           className={`h-4 w-4 fill-current ${sideNavExpand ? "mr-2" : "mr-0"}`}

@@ -10,16 +10,12 @@ export default function Sidebar() {
 
   return (
     <nav
-      className={`flex flex-col bg-white dark:bg-indigo-900 pb-6 shadow-md z-50 transform ease-in-out ${
+      className={`flex flex-col bg-white dark:bg-black pb-6 shadow-md z-50 transform ease-in-out ${
         sideNavExpand ? "w-80" : "w-20"
       }`}
     >
       <AppTitle />
-      <div
-        className={`flex flex-col bg-white dark:bg-indigo-900 pt-4 ${
-          sideNavExpand ? "px-6" : "px-3"
-        }`}
-      >
+      <div className={`flex flex-col pt-4 px-2`}>
         <UserInfo />
         <UserOptions />
         <SideNav />
